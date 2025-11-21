@@ -1,0 +1,325 @@
+[
+    {
+        "title": "Watchmen",
+        "author": "Alan Moore",
+        "categories": [
+            "Superhero",
+            "Mystery"
+        ],
+        "tags": [
+            "noir",
+            "deconstruction",
+            "dystopian"
+        ]
+    },
+    {
+        "title": "Maus",
+        "author": "Art Spiegelman",
+        "categories": [
+            "Biography",
+            "Non-fiction"
+        ],
+        "tags": [
+            "holocaust",
+            "memoir",
+            "historical"
+        ]
+    },
+    {
+        "title": "The Sandman",
+        "author": "Neil Gaiman",
+        "categories": [
+            "Fantasy",
+            "Horror"
+        ],
+        "tags": [
+            "mythology",
+            "dark-fantasy",
+            "dreams"
+        ]
+    },
+    {
+        "title": "Batman: The Dark Knight Returns",
+        "author": "Frank Miller",
+        "categories": [
+            "Superhero",
+            "Action"
+        ],
+        "tags": [
+            "batman",
+            "dystopian",
+            "noir"
+        ]
+    },
+    {
+        "title": "Persepolis",
+        "author": "Marjane Satrapi",
+        "categories": [
+            "Biography",
+            "Historical"
+        ],
+        "tags": [
+            "memoir",
+            "iran",
+            "coming-of-age"
+        ]
+    },
+    {
+        "title": "V for Vendetta",
+        "author": "Alan Moore",
+        "categories": [
+            "Sci-Fi",
+            "Action"
+        ],
+        "tags": [
+            "dystopian",
+            "revolution",
+            "anarchism"
+        ]
+    },
+    {
+        "title": "From Hell",
+        "author": "Alan Moore",
+        "categories": [
+            "Detective",
+            "Horror"
+        ],
+        "tags": [
+            "historical",
+            "jack-the-ripper",
+            "victorian"
+        ]
+    },
+    {
+        "title": "Batman: Year One",
+        "author": "Frank Miller",
+        "categories": [
+            "Superhero",
+            "Detective"
+        ],
+        "tags": [
+            "origin-story",
+            "batman",
+            "crime"
+        ]
+    },
+    {
+        "title": "The Killing Joke",
+        "author": "Alan Moore",
+        "categories": [
+            "Superhero",
+            "Horror"
+        ],
+        "tags": [
+            "joker",
+            "batman",
+            "psychological"
+        ]
+    },
+    {
+        "title": "Saga",
+        "author": "Brian K. Vaughan",
+        "categories": [
+            "Sci-Fi",
+            "Fantasy"
+        ],
+        "tags": [
+            "space-opera",
+            "romance",
+            "family"
+        ]
+    },
+    {
+        "title": "Y: The Last Man",
+        "author": "Brian K. Vaughan",
+        "categories": [
+            "Sci-Fi",
+            "Action"
+        ],
+        "tags": [
+            "post-apocalyptic",
+            "adventure",
+            "gender"
+        ]
+    },
+    {
+        "title": "Fun Home",
+        "author": "Alison Bechdel",
+        "categories": [
+            "Biography",
+            "Literary"
+        ],
+        "tags": [
+            "memoir",
+            "lgbtq",
+            "family"
+        ]
+    },
+    {
+        "title": "Blankets",
+        "author": "Craig Thompson",
+        "categories": [
+            "Romance",
+            "Literary"
+        ],
+        "tags": [
+            "coming-of-age",
+            "romance",
+            "religion"
+        ]
+    },
+    {
+        "title": "Ghost World",
+        "author": "Daniel Clowes",
+        "categories": [
+            "Literary",
+            "Humor"
+        ],
+        "tags": [
+            "slice-of-life",
+            "friendship",
+            "teenage"
+        ]
+    },
+    {
+        "title": "Jimmy Corrigan: The Smartest Kid on Earth",
+        "author": "Chris Ware",
+        "categories": [
+            "Literary"
+        ],
+        "tags": [
+            "experimental",
+            "family",
+            "loneliness"
+        ]
+    },
+    {
+        "title": "Bone",
+        "author": "Jeff Smith",
+        "categories": [
+            "Fantasy",
+            "Humor"
+        ],
+        "tags": [
+            "adventure",
+            "epic",
+            "comedy"
+        ]
+    },
+    {
+        "title": "All-Star Superman",
+        "author": "Grant Morrison",
+        "categories": [
+            "Superhero"
+        ],
+        "tags": [
+            "superman",
+            "optimistic",
+            "sci-fi"
+        ]
+    },
+    {
+        "title": "Scott Pilgrim",
+        "author": "Bryan Lee O'Malley",
+        "categories": [
+            "Romance",
+            "Humor"
+        ],
+        "tags": [
+            "video-games",
+            "music",
+            "coming-of-age"
+        ]
+    },
+    {
+        "title": "The Walking Dead",
+        "author": "Robert Kirkman",
+        "categories": [
+            "Horror",
+            "Action"
+        ],
+        "tags": [
+            "zombies",
+            "survival",
+            "drama"
+        ]
+    },
+    {
+        "title": "Fables",
+        "author": "Bill Willingham",
+        "categories": [
+            "Fantasy",
+            "Detective"
+        ],
+        "tags": [
+            "fairy-tales",
+            "mystery",
+            "urban-fantasy"
+        ]
+    },
+    {
+        "title": "Akira",
+        "author": "Katsuhiro Otomo",
+        "categories": [
+            "Sci-Fi",
+            "Action"
+        ],
+        "tags": [
+            "cyberpunk",
+            "post-apocalyptic",
+            "japanese"
+        ]
+    },
+    {
+        "title": "Death Note",
+        "author": "Tsugumi Ohba",
+        "categories": [
+            "Detective",
+            "Sci-Fi"
+        ],
+        "tags": [
+            "psychological",
+            "thriller",
+            "supernatural"
+        ]
+    },
+    {
+        "title": "Fullmetal Alchemist",
+        "author": "Hiromu Arakawa",
+        "categories": [
+            "Fantasy",
+            "Action"
+        ],
+        "tags": [
+            "alchemy",
+            "adventure",
+            "brotherhood"
+        ]
+    },
+    {
+        "title": "Monster",
+        "author": "Naoki Urasawa",
+        "categories": [
+            "Detective",
+            "Horror"
+        ],
+        "tags": [
+            "psychological",
+            "thriller",
+            "crime"
+        ]
+    },
+    {
+        "title": "One Piece",
+        "author": "Eiichiro Oda",
+        "categories": [
+            "Fantasy",
+            "Action"
+        ],
+        "tags": [
+            "pirates",
+            "adventure",
+            "shonen"
+        ]
+    }
+]
