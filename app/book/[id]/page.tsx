@@ -4,17 +4,30 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { getBookById, BookData } from '../../lib/google-books';
 import styles from './page.module.css';
+import { addToLibraryAction, checkIsBookInLibrary } from '../../lib/actions';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 export default function BookDetailsPage({ params }: { params: { id: string } }) {
+    const { data: session } = useSession();
+    const router = useRouter();
     const [book, setBook] = useState<BookData | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [isInLibrary, setIsInLibrary] = useState(false);
+    const [actionLoading, setActionLoading] = useState(false);
 
     useEffect(() => {
         async function fetchBook() {
             try {
                 const data = await getBookById(params.id);
                 setBook(data);
+
+                // Check if in library
+                if (session?.user) {
+                    const inLib = await checkIsBookInLibrary(params.id);
+                    setIsInLibrary(inLib);
+                }
             } catch (err) {
                 console.error('Error fetching book:', err);
                 setError('Failed to load book details.');
@@ -26,7 +39,34 @@ export default function BookDetailsPage({ params }: { params: { id: string } }) 
         if (params.id) {
             fetchBook();
         }
-    }, [params.id]);
+    }, [params.id, session]);
+
+    const handleAddToLibrary = async () => {
+        if (!session) {
+            router.push('/login');
+            return;
+        }
+
+        if (!book) return;
+
+        setActionLoading(true);
+        try {
+            await addToLibraryAction({
+                id: book.externalId,
+                title: book.title,
+                author: book.author,
+                coverUrl: book.coverUrl,
+                rating: undefined,
+                readCount: undefined
+            });
+            setIsInLibrary(true);
+        } catch (err) {
+            console.error('Failed to add to library:', err);
+            alert('Failed to add book to library');
+        } finally {
+            setActionLoading(false);
+        }
+    };
 
     if (loading) {
         return (
