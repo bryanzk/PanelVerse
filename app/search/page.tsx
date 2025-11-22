@@ -1,6 +1,6 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import BookCard, { Book } from '../components/BookCard';
 import { searchGraphicNovels, BookData } from '../lib/google-books';
@@ -8,6 +8,7 @@ import styles from './page.module.css';
 
 export default function SearchPage() {
     const searchParams = useSearchParams();
+    const router = useRouter();
     const query = searchParams.get('q');
 
     const [books, setBooks] = useState<Book[]>([]);
@@ -86,7 +87,7 @@ export default function SearchPage() {
                         <BookCard
                             key={book.id}
                             book={book}
-                            onViewDetails={(id) => console.log('View:', id)}
+                            onViewDetails={(id) => router.push(`/book/${id}`)}
                             onAddToLibrary={(id) => console.log('Add:', id)}
                         />
                     ))}

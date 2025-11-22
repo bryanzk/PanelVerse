@@ -1,5 +1,5 @@
 'use client';
-
+import { useRouter } from 'next/navigation';
 import BookCard from './components/BookCard';
 import styles from './page.module.css';
 
@@ -9,6 +9,7 @@ const CATEGORIES = [
 ];
 
 export default function HomePage() {
+    const router = useRouter();
     // In production, this would fetch from database
     // Using fixed data to avoid hydration errors
     const mockBooks = [
@@ -106,7 +107,7 @@ export default function HomePage() {
                             <BookCard
                                 key={book.id}
                                 book={book}
-                                onViewDetails={(id) => console.log('View:', id)}
+                                onViewDetails={(id) => router.push(`/book/${id}`)}
                                 onAddToLibrary={(id) => console.log('Add:', id)}
                             />
                         ))}
