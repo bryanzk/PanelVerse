@@ -31,9 +31,21 @@ export default function BookCard({ book, onViewDetails, onAddToLibrary }: BookCa
   return (
     <article className={styles.bookCard} onClick={handleViewClick}>
       <div className={styles.coverContainer}>
-        <div className={styles.placeholderCover}>
-          {book.icon || '📚'}
-        </div>
+        {book.icon ? (
+          <div className={styles.placeholderCover}>
+            {book.icon}
+          </div>
+        ) : book.coverUrl ? (
+          <img
+            src={book.coverUrl}
+            alt={`${book.title} cover`}
+            className={styles.cover}
+          />
+        ) : (
+          <div className={styles.placeholderCover}>
+            📚
+          </div>
+        )}
       </div>
 
       <div className={styles.content}>
