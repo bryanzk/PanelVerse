@@ -1,3 +1,5 @@
+'use client';
+
 import styles from './BookCard.module.css';
 
 export interface Book {
@@ -29,8 +31,8 @@ export default function BookCard({ book, onViewDetails, onAddToLibrary }: BookCa
     <article className={styles.bookCard} onClick={handleViewClick}>
       <div className={styles.coverContainer}>
         {book.coverUrl ? (
-          <img 
-            src={book.coverUrl} 
+          <img
+            src={book.coverUrl}
             alt={`${book.title} cover`}
             className={styles.cover}
           />
@@ -40,11 +42,11 @@ export default function BookCard({ book, onViewDetails, onAddToLibrary }: BookCa
           </div>
         )}
       </div>
-      
+
       <div className={styles.content}>
         <h3 className={styles.title}>{book.title}</h3>
         <p className={styles.author}>By {book.author}</p>
-        
+
         {(book.rating || book.readCount) && (
           <div className={styles.meta}>
             {book.rating && (
@@ -61,16 +63,16 @@ export default function BookCard({ book, onViewDetails, onAddToLibrary }: BookCa
             )}
           </div>
         )}
-        
+
         <div className={styles.actions}>
-          <button 
+          <button
             className={`${styles.button} ${styles.primaryButton}`}
             onClick={handleViewClick}
           >
             View book
           </button>
           {onAddToLibrary && (
-            <button 
+            <button
               className={`${styles.button} ${styles.secondaryButton}`}
               onClick={handleAddClick}
               aria-label="Add to my library"

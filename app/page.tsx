@@ -1,3 +1,5 @@
+'use client';
+
 import BookCard from './components/BookCard';
 import styles from './page.module.css';
 import { MOCK_BOOKS } from './lib/google-books';
