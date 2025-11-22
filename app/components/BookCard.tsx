@@ -7,6 +7,7 @@ export interface Book {
   title: string;
   author: string;
   coverUrl?: string;
+  icon?: string;
   rating?: number;
   readCount?: number;
 }
@@ -30,17 +31,9 @@ export default function BookCard({ book, onViewDetails, onAddToLibrary }: BookCa
   return (
     <article className={styles.bookCard} onClick={handleViewClick}>
       <div className={styles.coverContainer}>
-        {book.coverUrl ? (
-          <img
-            src={book.coverUrl}
-            alt={`${book.title} cover`}
-            className={styles.cover}
-          />
-        ) : (
-          <div className={styles.placeholderCover}>
-            📚
-          </div>
-        )}
+        <div className={styles.placeholderCover}>
+          {book.icon || '📚'}
+        </div>
       </div>
 
       <div className={styles.content}>

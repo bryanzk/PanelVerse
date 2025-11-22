@@ -2,7 +2,6 @@
 
 import BookCard from './components/BookCard';
 import styles from './page.module.css';
-import { MOCK_BOOKS } from './lib/google-books';
 
 const CATEGORIES = [
     'Detective', 'Romance', 'Non-fiction', 'Biography',
@@ -11,14 +10,63 @@ const CATEGORIES = [
 
 export default function HomePage() {
     // In production, this would fetch from database
-    const mockBooks = MOCK_BOOKS.map(book => ({
-        id: book.externalId,
-        title: book.title,
-        author: book.author,
-        coverUrl: book.coverUrl,
-        rating: 4.5,
-        readCount: Math.floor(Math.random() * 500) + 50,
-    }));
+    // Using fixed data to avoid hydration errors
+    const mockBooks = [
+        {
+            id: 'mock-1',
+            title: 'Watchmen',
+            author: 'Alan Moore',
+            coverUrl: 'https://books.google.com/books/content?id=lV4_OIx_Q-MC&printsec=frontcover&img=1&zoom=2',
+            icon: '⚡',
+            rating: 4.8,
+            readCount: 342,
+        },
+        {
+            id: 'mock-2',
+            title: 'Maus',
+            author: 'Art Spiegelman',
+            coverUrl: 'https://books.google.com/books/content?id=9BTwO4u7Jx8C&printsec=frontcover&img=1&zoom=2',
+            icon: '🐭',
+            rating: 4.9,
+            readCount: 289,
+        },
+        {
+            id: 'mock-3',
+            title: 'The Sandman',
+            author: 'Neil Gaiman',
+            coverUrl: 'https://books.google.com/books/content?id=AxGGDwAAQBAJ&printsec=frontcover&img=1&zoom=2',
+            icon: '🌙',
+            rating: 4.7,
+            readCount: 456,
+        },
+        {
+            id: 'mock-4',
+            title: 'Batman: The Dark Knight Returns',
+            author: 'Frank Miller',
+            coverUrl: 'https://books.google.com/books/content?id=6OyZQwAACAAJ&printsec=frontcover&img=1&zoom=2',
+            icon: '🦇',
+            rating: 4.6,
+            readCount: 378,
+        },
+        {
+            id: 'mock-5',
+            title: 'V for Vendetta',
+            author: 'Alan Moore',
+            coverUrl: 'https://books.google.com/books/content?id=QrqJDwAAQBAJ&printsec=frontcover&img=1&zoom=2',
+            icon: '🎭',
+            rating: 4.5,
+            readCount: 256,
+        },
+        {
+            id: 'mock-6',
+            title: 'Saga',
+            author: 'Brian K. Vaughan',
+            coverUrl: 'https://books.google.com/books/content?id=ViIhBAAAQBAJ&printsec=frontcover&img=1&zoom=2',
+            icon: '🚀',
+            rating: 4.7,
+            readCount: 412,
+        },
+    ];
 
     return (
         <div className={styles.homepage}>
