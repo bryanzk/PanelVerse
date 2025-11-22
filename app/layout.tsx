@@ -1,6 +1,7 @@
 import './styles/globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import AuthProvider from './components/AuthProvider';
 
 export const metadata = {
     title: 'PanelVerse - Explore Graphic Novels',
@@ -19,11 +20,13 @@ export default function RootLayout({
                 <link rel="icon" href="/favicon.svg" />
             </head>
             <body>
-                <Navbar />
-                <main style={{ minHeight: 'calc(100vh - 64px - 300px)' }}>
-                    {children}
-                </main>
-                <Footer />
+                <AuthProvider>
+                    <Navbar />
+                    <main style={{ minHeight: 'calc(100vh - 64px - 300px)' }}>
+                        {children}
+                    </main>
+                    <Footer />
+                </AuthProvider>
             </body>
         </html>
     );
